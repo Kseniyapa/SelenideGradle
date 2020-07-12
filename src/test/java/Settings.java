@@ -6,10 +6,13 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class Settings {
     private static final String URL = "https://test.uxcrowd.ru/";
+    public UserAuthorization userAuthorization;
+    public MenuPage menuPage;
 
     @BeforeClass
     public void openSession() {
         open(URL);
+        UserAuthorization userAuthorization = new UserAuthorization();
     }
 
 
