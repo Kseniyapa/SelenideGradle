@@ -5,14 +5,18 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 import static com.codeborne.selenide.Selenide.open;
 
 public class Settings {
-    private static final String URL = "https://test.uxcrowd.ru/";
+    private static final String URL = "https://uxcrowd.ru/";
     public UserAuthorization userAuthorization;
     public MenuPage menuPage;
+    public TestCreateNewTest testCreateNewTest;
 
     @BeforeClass
     public void openSession() {
         open(URL);
-        UserAuthorization userAuthorization = new UserAuthorization();
+         userAuthorization = new UserAuthorization();
+         menuPage = new MenuPage();
+         testCreateNewTest = new TestCreateNewTest();
+
     }
 
 
