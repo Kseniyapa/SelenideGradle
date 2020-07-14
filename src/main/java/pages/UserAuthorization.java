@@ -1,3 +1,5 @@
+package pages;
+
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
 
@@ -21,29 +23,38 @@ public class UserAuthorization {
     private SelenideElement logoutButton = $x("//*[@id=\"logout\"]"); // Кнопка "Выйти" из личного кабинета.
 
 
-    @Step(value = "Открытие окна авторизации")
+    @Step("Открытие окна авторизации")
     public void openAuth() {
         openAuth.shouldBe(visible).click();
     }
 
-    @Step(value = "Вводим емайл {0}")
+    @Step("Вводим емайл {0}")
     public void emailField(String email) {
         emailField.setValue(email);
     }
 
-    @Step(value = "Вводим пароль {0}")
+    @Step("Вводим пароль {0}")
     public void passwordField(String password) {
         passwordField.setValue(password);
     }
 
-    @Step(value = "Проверям, что кнопка 'Выйти'активна")
+    @Step("Проверям, что кнопка 'Выйти'активна")
     public boolean logoutButton() {
         return logoutButton.isDisplayed();
     }
 
-    @Step(value = "Нажимаем кнопку 'Войти'")
+    @Step("Нажимаем кнопку 'Войти'")
     public void enterButton() {
         enterButton.shouldBe(visible).pressEnter();
+    }
+
+    public void userAuth(String email, String password) {
+        openAuth.shouldBe(visible).click();
+        emailField.setValue(email);
+        passwordField.setValue(password);
+        logoutButton.isDisplayed();
+        enterButton.shouldBe(visible).pressEnter();
+        //logoutButton.click();
     }
 
 }
