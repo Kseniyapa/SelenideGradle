@@ -10,12 +10,12 @@ public class Settings {
 
     public static final String EXCEPTEDTEXTAFTERCREATENEWTEST = "Ура! Тест создан и отправлен пользователям.";
     public static final String TESTNAME = "first test";
-    public static final String WEBSITE = "uxcrowd.ru";
+    public static final String WEBSITE = "test.uxcrowd.ru";
     public static final String SEGMENTNAME = "test";
     public static final String QUESTION = "added new question";
-    public static final String EMAILCLIENT = "tqew@1secmail.com";
-    public static final String PASSWORDCLIENT = "lFdRUt";
-    private static final String URL = "https://uxcrowd.ru/";
+    public static final String EMAILCLIENT = "";
+    public static final String PASSWORDCLIENT = "";
+    private static final String URL = "https://test.uxcrowd.ru/";
     public UserAuthorization userAuthorization;
     public MenuPage menuPage;
     public CreateNewTest createNewTest;
