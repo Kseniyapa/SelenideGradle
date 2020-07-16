@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 
 import static io.qameta.allure.Allure.step;
 
-public class MenuPageTest extends Settings {
+public class MenuTest extends Settings {
     @Test
     @Description("Проверяем вкладку 'О продукте', " +
             "должна быть активна и при нажатии открывать соответствующий функционал")
